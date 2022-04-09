@@ -1,7 +1,7 @@
-create database algas;
+CREATE DATABASE IF NOT EXISTS  algas;
 use algas;
 
-create table dados (
+CREATE TABLE IF NOT EXISTS dados (
 _id_ int  primary key auto_increment,
 iterador    bigint ,            
 acumulador  int,      
