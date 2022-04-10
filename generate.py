@@ -1,22 +1,35 @@
 import time
 import sys
 import mysql.connector
+import memory_profiler as mp
 
 #%load_ext memory_profiler
 
 def geracao(entradas):
     inicio = time.time()
     acumulador = 0
-    for iteracao in range(1, entradas+1):
+    data_list = []
+    for iteracao in range(1, entradas):
         acumulador += 1
+        fim = time.time()
+        memoria = round(mp.memory_usage()[0],2)
+        data_list.append({
+            'iterador': iteracao, 
+            'acumulador': acumulador, 
+            'tempo': (fim - inicio), 
+            'memoria': memoria})
 
-    fim = time.time()
-    memoria = 0 # %memit -o
-    return {'iterador': iteracao, 'acumulador': acumulador, 'tempo': (fim - inicio), 'memoria':str(memoria).split()[2]}
+    return data_list
 
 def salvar(lista_dados):
     try:
-        connection = mysql.connector.connect(host='localhost', database='algas', user='root', password='12345')
+        connection = mysql.connector.connect(
+            host='localhost', 
+            database='algas', 
+            user='root', 
+            password='temp123', 
+            port='3306'
+        )
         
         iterador = lista_dados.get('iterador',None)
         acumulador = lista_dados.get('acumulador',None)
@@ -27,16 +40,13 @@ def salvar(lista_dados):
         cursor = connection.cursor()
         cursor.execute(query)
         connection.commit()
+        print(f'Dado salvos: {lista_dados}')
 
     except mysql.connector.Error as error:
         print(error)
 
-    finally:
-        cursor.close()
-
 if __name__ == "__main__":
-    for i in range(2100):
-        salvar(geracao(i**3))
-        
-    #salvar(geracao(13**3))
-
+    for i in range(5,20,1):
+        data_list = geracao(i*3)
+        for data in data_list:
+            salvar(data)

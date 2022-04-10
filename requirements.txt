@@ -1,0 +1,5 @@
+memory-profiler==0.60.0
+mysql-connector-python==8.0.28
+pip==22.0.4
+psutil==5.9.0
+setuptools==58.1.0
