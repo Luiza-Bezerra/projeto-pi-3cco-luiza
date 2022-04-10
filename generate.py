@@ -40,7 +40,7 @@ def salvar(lista_dados):
         cursor = connection.cursor()
         cursor.execute(query)
         connection.commit()
-        print(f'Dado salvos: {lista_dados}')
+        print(f'Dados salvos: {lista_dados}\n')
 
     except mysql.connector.Error as error:
         print(error)
