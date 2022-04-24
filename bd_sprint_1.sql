@@ -1,5 +1,5 @@
-CREATE DATABASE algas;
-USE algas;
+CREATE DATABASE algas_1;
+USE algas_1;
 
 CREATE TABLE  dados (
     _id_ int  primary key auto_increment,

@@ -22,7 +22,7 @@ def salvar(lista_dados):
     try:
         connection = mysql.connector.connect(
             host='localhost', 
-            database='algas', 
+            database='algas_1', 
             user='root', 
             password='temp123', 
             port='3306'

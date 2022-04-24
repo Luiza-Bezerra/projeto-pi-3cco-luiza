@@ -37,7 +37,7 @@ def geracao(entradas):
 def get_conn():
     return mysql.connector.connect(
             host='localhost', 
-            database='algas', 
+            database='algas_2', 
             user='root', 
             password='temp123', 
             port='3306'
