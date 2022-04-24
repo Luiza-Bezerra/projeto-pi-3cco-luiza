@@ -8,6 +8,6 @@ CREATE TABLE  dados (
     regiao  varchar(2), 
     idade_descoberta int    
     acumulador  int,      
-    tempo decimal(12,),                  
+    tempo decimal(12,9),                  
     memoria decimal(12,5)
 );
