@@ -56,7 +56,7 @@ def salvar(lista_dados):
         
         query = f'''
             INSERT INTO dados 
-                (idade, genero, tempo, regiao,idade_descoberta,memoria) 
+                (idade, genero, regiao, idade_descoberta, tempo, memoria) 
             VALUES 
                 ({idade},{genero},{regiao},{idade_descoberta},{tempo},{memoria})
         '''
