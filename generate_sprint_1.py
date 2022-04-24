@@ -1,9 +1,6 @@
 import time
-import sys
 import mysql.connector
 import memory_profiler as mp
-
-#%load_ext memory_profiler
 
 def geracao(entradas):
     inicio = time.time()
