@@ -6,8 +6,7 @@ CREATE TABLE  dados (
     idade int ,            
     genero  boolean,      
     regiao  varchar(2), 
-    idade_descoberta int    
-    acumulador  int,      
+    idade_descoberta int,
     tempo decimal(12,9),                  
     memoria decimal(12,5)
 );
