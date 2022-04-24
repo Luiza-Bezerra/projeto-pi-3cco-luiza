@@ -3,33 +3,24 @@ import mysql.connector
 import memory_profiler as mp
 import random
 
-REGIAO = [
-    'S',
-    'N',
-    'SE',
-    'NE',
-    'CO',
-]
-
 def geracao(entradas):
     inicio = time.time()
     data_list = []
 
     for i in range(1, entradas):
         idade = random.randint(17,64)
-        genero =  bool(random.getrandbits(1))
-        idade_descoberta = random.randint(17,idade)
+        idade_descoberta = random.randint(17,idade-1)
 
         fim = time.time()
         memoria = round(mp.memory_usage()[0],2)
 
         data_list.append({
-            'idade': idade, 
-            'genero': genero, 
-            'regiao': random.choice(REGIAO), 
-            'idade_descoberta': idade_descoberta,
-            'tempo': (fim - inicio), 
-            'memoria': memoria
+            'idade': idade, # Idade da pessoa altista
+            'genero': random.choice(['M','F']), # F-feminino, M-Masculino
+            'regiao': random.choice(['S','N','SE','NE','CO']), # Regiões do Brasil
+            'idade_descoberta': idade_descoberta, # Idade que descobriou o altismo
+            'tempo': (fim - inicio), # Tempo de execução
+            'memoria': memoria # Memória usada na execução
         })
 
     return data_list
