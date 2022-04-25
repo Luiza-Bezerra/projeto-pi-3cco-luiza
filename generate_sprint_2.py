@@ -25,13 +25,6 @@ def geracao(entradas):
 
     return data_list
 
-idade            | int           | YES  |     | NULL    |                |
-| genero           | char(1)       | YES  |     | NULL    |                |
-| regiao           | varchar(2)    | YES  |     | NULL    |                |
-| idade_descoberta | int           | YES  |     | NULL    |                |
-| tempo            | decimal(12,9) | YES  |     | NULL    |                |
-| memoria    
-
 def get_conn():
     return mysql.connector.connect(
             host='localhost', 
