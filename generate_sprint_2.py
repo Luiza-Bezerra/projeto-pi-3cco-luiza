@@ -46,7 +46,7 @@ def salvar(lista_dados):
         memoria = float(lista_dados.get('memoria',None))
 
         print(f'Tentando inserir:{lista_dados}\n')
-        query = f'INSERT INTO dados(idade, genero, regiao, idade_descoberta, tempo, memoria) VALUES({idade},{genero},{regiao},{idade_descoberta},{tempo},{memoria})'
+        query = f'INSERT INTO dados(idade, genero, regiao, descoberta, tempo, memoria) VALUES({idade},{genero},{regiao},{idade_descoberta},{tempo},{memoria})'
         print(f'Query:{query}\n')
 
         cursor = connection.cursor()
