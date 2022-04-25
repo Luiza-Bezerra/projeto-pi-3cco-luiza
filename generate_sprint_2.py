@@ -9,7 +9,7 @@ def geracao(entradas):
 
     for i in range(1, entradas):
         idade = random.randint(17,64)
-        idade_descoberta = random.randint(17,idade-1)
+        idade_descoberta = random.randint(17,idade)
 
         fim = time.time()
         memoria = round(mp.memory_usage()[0],2)
@@ -24,6 +24,13 @@ def geracao(entradas):
         })
 
     return data_list
+
+idade            | int           | YES  |     | NULL    |                |
+| genero           | char(1)       | YES  |     | NULL    |                |
+| regiao           | varchar(2)    | YES  |     | NULL    |                |
+| idade_descoberta | int           | YES  |     | NULL    |                |
+| tempo            | decimal(12,9) | YES  |     | NULL    |                |
+| memoria    
 
 def get_conn():
     return mysql.connector.connect(
@@ -45,12 +52,7 @@ def salvar(lista_dados):
         tempo = lista_dados.get('tempo',None)
         memoria = lista_dados.get('memoria',None)
         
-        query = f'''
-            INSERT INTO dados 
-                (idade, genero, regiao, idade_descoberta, tempo, memoria) 
-            VALUES 
-                ({idade},{genero},{regiao},{idade_descoberta},{tempo},{memoria})
-        '''
+        query = f'INSERT INTO dados (idade, genero, regiao, idade_descoberta, tempo, memoria) VALUES({idade},{genero},{regiao},{idade_descoberta},{tempo},{memoria})'
         cursor = connection.cursor()
         cursor.execute(query)
         connection.commit()
