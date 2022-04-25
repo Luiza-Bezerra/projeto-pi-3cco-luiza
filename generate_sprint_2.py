@@ -37,16 +37,16 @@ def get_conn():
 def salvar(lista_dados):
     try:
         connection = get_conn()
-        
+
         idade = int(lista_dados.get('idade',None))
         genero = str(lista_dados.get('genero',None))
         regiao = str(lista_dados.get('regiao',None))
-        idade_descoberta = int(lista_dados.get('idade_descoberta',None))
+        descoberta = int(lista_dados.get('idade_descoberta',None))
         tempo = float(lista_dados.get('tempo', None))
         memoria = float(lista_dados.get('memoria',None))
 
         print(f'Tentando inserir:{lista_dados}\n')
-        query = f'INSERT INTO dados(idade, genero, regiao, descoberta, tempo, memoria) VALUES({idade},{genero},{regiao},{idade_descoberta},{tempo},{memoria})'
+        query = f"INSERT INTO dados(idade, genero, regiao, descoberta, tempo, memoria) VALUES({idade},{genero},{regiao},{descoberta},{tempo},{memoria});"
         print(f'Query:{query}\n')
 
         cursor = connection.cursor()

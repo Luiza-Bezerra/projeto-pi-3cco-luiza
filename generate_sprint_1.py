@@ -33,7 +33,7 @@ def salvar(lista_dados):
         tempo = lista_dados.get('tempo',None)
         memoria = lista_dados.get('memoria',None)
         
-        query = f'INSERT INTO dados (iterador,acumulador,tempo,memoria) VALUES({iterador},{acumulador},{tempo},{memoria})'
+        query = "'INSERT INTO dados (iterador,acumulador,tempo,memoria) VALUES({iterador},{acumulador},{tempo},{memoria});"
         cursor = connection.cursor()
         cursor.execute(query)
         connection.commit()
