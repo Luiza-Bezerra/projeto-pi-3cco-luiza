@@ -38,14 +38,15 @@ def salvar(lista_dados):
     try:
         connection = get_conn()
         
-        idade = lista_dados.get('idade',None)
-        genero =lista_dados.get('genero',None)
-        regiao = lista_dados.get('regiao',None)
-        idade_descoberta = lista_dados.get('idade_descoberta',None)
-        tempo = lista_dados.get('tempo',None)
-        memoria = lista_dados.get('memoria',None)
+        idade = int(lista_dados.get('idade',None))
+        genero = str(lista_dados.get('genero',None))
+        regiao = str(lista_dados.get('regiao',None))
+        idade_descoberta = int(lista_dados.get('idade_descoberta',None))
+        tempo = float(lista_dados.get('tempo', None))
+        memoria = float(lista_dados.get('memoria',None))
         
-        query = f'INSERT INTO dados (idade, genero, regiao, idade_descoberta, tempo, memoria) VALUES({idade},{genero},{regiao},{idade_descoberta},{tempo},{memoria})'
+        print(f'Tentando inserir:{lista_dados}\n')
+        query = f'INSERT INTO dados(idade, genero, regiao, idade_descoberta, tempo, memoria) VALUES({idade},{genero},{regiao},{idade_descoberta},{tempo},{memoria})'
         cursor = connection.cursor()
         cursor.execute(query)
         connection.commit()
@@ -56,6 +57,7 @@ def salvar(lista_dados):
 
 if __name__ == "__main__":
     for i in range(5,20,1):
-        data_list = geracao(i*3)
+        data_list = geracao(i)
+        print(f'Dados gerados:\n{data_list}\n')
         for data in data_list:
             salvar(data)
