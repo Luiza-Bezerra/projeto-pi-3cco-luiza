@@ -42,11 +42,11 @@ def salvar(lista_dados):
         genero = str(lista_dados.get('genero',None))
         regiao = str(lista_dados.get('regiao',None))
         descoberta = int(lista_dados.get('idade_descoberta',None))
-        tempo = float(lista_dados.get('tempo', None))
-        memoria = float(lista_dados.get('memoria',None))
+        tempo = round(float(lista_dados.get('tempo', None)), 9)
+        memoria = round(float(lista_dados.get('memoria',None)), 5)
 
-        print(f'Tentando inserir:{lista_dados}\n')
-        query = f"INSERT INTO dados(idade, genero, regiao, descoberta, tempo, memoria) VALUES({idade},{genero},{regiao},{descoberta},{tempo},{memoria});"
+
+        query = f"INSERT INTO dados(idade, genero, regiao, descoberta, tempo, memoria) VALUES({idade},'{genero}','{regiao}',{descoberta},{tempo},{memoria});"
         print(f'Query:{query}\n')
 
         cursor = connection.cursor()
