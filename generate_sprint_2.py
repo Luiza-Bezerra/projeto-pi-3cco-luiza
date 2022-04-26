@@ -16,7 +16,7 @@ def geracao(entradas):
 
         data_list.append({
             'idade_atual': idade_atual, # Idade da pessoa autista
-            'genero': random.choice(['M','M','M','M','M','F']), # F-feminino | M-Masculino | (1 F a cada 5 M possui autismo)
+            'genero': random.choice(['M','M','M','M','F']), # F-feminino | M-Masculino | (1 F a cada 4 M possui autismo)
             'regiao': random.choice(['S','N','SE','NE','CO']), # Regiões do Brasil
             'idade_descoberta': idade_descoberta, # Idade que descobriou o autismo
             'tempo': (fim - inicio), # Tempo de execução
