@@ -14,7 +14,7 @@
     docker pull mysql:latest
 
     docker images mysql
-    
+
     docker run --name banco_sprint_2 -p 3306:3306 -v mysql_volume:/var/lib/mysql/ -d -e "MYSQL_ROOT_PASSWORD=temp123" mysql
 
     docker exec -it banco_sprint_2 bash 
@@ -28,6 +28,8 @@
 # ___ Rodar o projeto ______
 sudo su 
 ** User Root
+
+docker start 6e6
 
 cd projeto-pi-3cco-luiza
 
