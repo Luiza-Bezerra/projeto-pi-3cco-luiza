@@ -26,24 +26,24 @@
     source /tmp/bd_sprint_2.sql 
 
 # ___ Rodar o projeto ______
-sudo su 
-** User Root
+    sudo su 
+    ** User Root
 
-docker start 6e6
+    docker start 6e6
 
-cd projeto-pi-3cco-luiza
+    cd projeto-pi-3cco-luiza
 
-source ./venv/bin/activate
+    source ./venv/bin/activate
 
-python generate_sprint_2.py
+    python generate_sprint_2.py
 
 # ___ Validar o banco ______
 
-docker exec -it banco_sprint_2 bash
+    docker exec -it banco_sprint_2 bash
 
-mysql -h localhost -P 3306 -u root -p
-** password: temp123
+    mysql -h localhost -P 3306 -u root -p
+    ** password: temp123
 
-use algas_2;
+    use algas_2;
 
-select * from dados;
+    select * from dados;
