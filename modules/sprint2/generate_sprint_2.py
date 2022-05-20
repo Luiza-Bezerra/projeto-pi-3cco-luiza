@@ -8,7 +8,7 @@ def geracao(entradas):
     data_list = []
 
     for i in range(1, entradas):
-        idade_atual = random.randint(17,64) # Foco jovens e adultos com autismo
+        idade_atual = random.randint(17,64) # Foco jovens e adultos com autismo 
         idade_descoberta = random.randint(0,idade_atual) 
 
         fim = time.time()
