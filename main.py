@@ -1,4 +1,5 @@
 import argparse
+import csv
 
 def parse_arguments() -> dict:
     parser = argparse.ArgumentParser(description='')
@@ -21,7 +22,7 @@ def parse_arguments() -> dict:
     parser.add_argument(
         '-c','--config',
         dest='config',
-        required =True,
+        required =False,
         default= './local.json',
         help = 'Arquivo de configuração.'
     )
@@ -39,15 +40,15 @@ if __name__ == "__main__":
 
     if module == 'generate1':
         from modules.sprint1 import execute
-        execute(args["samples"])
+        execute(args["samples"]) 
     
     elif module == 'generate2':
         from modules.sprint2 import execute
         execute(args['config'])
 
     elif module == 'generate_csv':
-        from modules.sprint2 import execute
-        execute(args['config'])
+        from modules.sprint3.generate_csv import execute
+        execute(args["samples"])
 
     else:
         raise ValueError('Argumento inválido!')

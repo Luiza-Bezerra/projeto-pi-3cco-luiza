@@ -1,0 +1,18 @@
+CSV;tipo de dado;;JSON;tipo de dado;;XML;tipo de dado;
+identificador;int;;identificador;int;;pais;str;
+grau;alto, medio, baixo;;classe;A,B,C,D,E;;região;str;
+raca;str;;quantidade_familia;int;;identificador;int;
+genero;M , F;;total_salario;float;;cidade;str;
+idade_diagnostico;int;;oficio;bool;;populacao_pais;int;
+idade ;int;;funcionario_publico;bool;;populacao_cidade;int;
+sensibilidade_sentidos;bool;;score;float;;populacao_regiao;int;
+agressivo;bool;;patrimonio;float;;;;
+hiperativo;bool;;data de coleta;date;;;;
+passivo;bool;;;;;;;
+baixa_concentracao;bool;;;;;;;
+movimentos_repetitivos;bool;;;;;;;
+hiperfoco;bool;;;;;;;
+agorafobia;bool;;;;;;;
+introvertido;bool;;;;;;;
+data de coleta;date;;;;;;;
+tipo_autismo;string;;;;;;;

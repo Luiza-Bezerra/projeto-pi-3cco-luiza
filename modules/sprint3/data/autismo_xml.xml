@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<data>
+  <row>
+    <identificador>1</identificador>
+    <pais>1</pais>
+    <regiao>{'id': 'SE', 'description': 'Sudeste', 'economics': {'PIB_percent_BR': 55.9, 'PIB': 3460000000000, 'populacao': 89632912, 'densidade_demografica': 96.94, 'area': 924620678, 'regiao_geoeconomica': 'Centro-Sul', 'gentilico': 'sudestino', 'raca_predominante': 'branca'}}</regiao>
+  </row>
+  <row>
+    <identificador>2</identificador>
+    <pais>2</pais>
+    <regiao>{'id': 'S', 'description': 'Sul', 'economics': {'PIB_percent_BR': 16.4, 'PIB': 1195000000000, 'populacao': 30192315, 'densidade_demografica': 48.8, 'area': 576736819, 'regiao_geoeconomica': 'Centro-Sul', 'gentilico': 'sulista', 'raca_predominante': 'branca'}}</regiao>
+  </row>
+  <row>
+    <identificador>3</identificador>
+    <pais>3</pais>
+    <regiao>{'id': 'N', 'description': 'Norte', 'economics': {'PIB_percent_BR': 5.3, 'PIB': 1195000000000, 'populacao': 18672591, 'densidade_demografica': 4.12, 'area': 3853676948, 'regiao_geoeconomica': 'Amazônia', 'gentilico': 'nortista', 'raca_predominante': 'parda'}}</regiao>
+  </row>
+  <row>
+    <identificador>4</identificador>
+    <pais>4</pais>
+    <regiao>{'id': 'CO', 'description': 'Centro-Oeste', 'economics': {'PIB_percent_BR': 9.4, 'PIB': 542632000000, 'populacao': 16090000, 'densidade_demografica': 8.7, 'area': 1612000, 'regiao_geoeconomica': ['Amazônia', 'Centro-Sul'], 'gentilico': 'centro-oestino', 'raca_predominante': 'parda'}}</regiao>
+  </row>
+  <row>
+    <identificador>5</identificador>
+    <pais>5</pais>
+    <regiao>{'id': 'S', 'description': 'Sul', 'economics': {'PIB_percent_BR': 16.4, 'PIB': 1195000000000, 'populacao': 30192315, 'densidade_demografica': 48.8, 'area': 576736819, 'regiao_geoeconomica': 'Centro-Sul', 'gentilico': 'sulista', 'raca_predominante': 'branca'}}</regiao>
+  </row>
+  <row>
+    <identificador>6</identificador>
+    <pais>6</pais>
+    <regiao>{'id': 'N', 'description': 'Norte', 'economics': {'PIB_percent_BR': 5.3, 'PIB': 1195000000000, 'populacao': 18672591, 'densidade_demografica': 4.12, 'area': 3853676948, 'regiao_geoeconomica': 'Amazônia', 'gentilico': 'nortista', 'raca_predominante': 'parda'}}</regiao>
+  </row>
+  <row>
+    <identificador>7</identificador>
+    <pais>7</pais>
+    <regiao>{'id': 'CO', 'description': 'Centro-Oeste', 'economics': {'PIB_percent_BR': 9.4, 'PIB': 542632000000, 'populacao': 16090000, 'densidade_demografica': 8.7, 'area': 1612000, 'regiao_geoeconomica': ['Amazônia', 'Centro-Sul'], 'gentilico': 'centro-oestino', 'raca_predominante': 'parda'}}</regiao>
+  </row>
+  <row>
+    <identificador>8</identificador>
+    <pais>8</pais>
+    <regiao>{'id': 'N', 'description': 'Norte', 'economics': {'PIB_percent_BR': 5.3, 'PIB': 1195000000000, 'populacao': 18672591, 'densidade_demografica': 4.12, 'area': 3853676948, 'regiao_geoeconomica': 'Amazônia', 'gentilico': 'nortista', 'raca_predominante': 'parda'}}</regiao>
+  </row>
+  <row>
+    <identificador>9</identificador>
+    <pais>9</pais>
+    <regiao>{'id': 'SE', 'description': 'Sudeste', 'economics': {'PIB_percent_BR': 55.9, 'PIB': 3460000000000, 'populacao': 89632912, 'densidade_demografica': 96.94, 'area': 924620678, 'regiao_geoeconomica': 'Centro-Sul', 'gentilico': 'sudestino', 'raca_predominante': 'branca'}}</regiao>
+  </row>
+</data>

@@ -1,0 +1,55 @@
+[{
+    "id_paciente": 1,
+    "classe": "E",
+    "quantidade_familia": 1,
+    "total_salario": 7641,
+    "empregado": true
+}, {
+    "id_paciente": 2,
+    "classe": "B",
+    "quantidade_familia": 1,
+    "total_salario": 7123,
+    "empregado": false
+}, {
+    "id_paciente": 3,
+    "classe": "A",
+    "quantidade_familia": 6,
+    "total_salario": 1858,
+    "empregado": true
+}, {
+    "id_paciente": 4,
+    "classe": "B",
+    "quantidade_familia": 1,
+    "total_salario": 7272,
+    "empregado": false
+}, {
+    "id_paciente": 5,
+    "classe": "E",
+    "quantidade_familia": 1,
+    "total_salario": 4325,
+    "empregado": false
+}, {
+    "id_paciente": 6,
+    "classe": "A",
+    "quantidade_familia": 1,
+    "total_salario": 3501,
+    "empregado": true
+}, {
+    "id_paciente": 7,
+    "classe": "C",
+    "quantidade_familia": 1,
+    "total_salario": 2681,
+    "empregado": false
+}, {
+    "id_paciente": 8,
+    "classe": "E",
+    "quantidade_familia": 1,
+    "total_salario": 4691,
+    "empregado": true
+}, {
+    "id_paciente": 9,
+    "classe": "E",
+    "quantidade_familia": 6,
+    "total_salario": 3530,
+    "empregado": false
+}]
