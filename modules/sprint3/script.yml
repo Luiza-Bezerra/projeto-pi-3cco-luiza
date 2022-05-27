@@ -40,7 +40,7 @@ Parameters:
   Client:
     Type: String
     Description: O nome do cliente
-    Default: sptech
+    Default: grupo-09
   VpcCidr:
     Type: String
     AllowedPattern: '((\d{1,3})\.){3}\d{1,3}/\d{1,2}'
@@ -71,6 +71,39 @@ Parameters:
     NoEcho: true
     Description: A senha de acesso ao jupyter
 Resources:
+  BucketBrutos: 
+    Type: "AWS::S3::Bucket"
+    Description: "Creating Amazon S3 bucket from CloudFormation"
+    Properties: 
+      AccessControl: Private
+      BucketName: !Sub ${AWS::StackName}-${Client}-bucket-brutos
+      PublicAccessBlockConfiguration: 
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+  BucketProcessados: 
+    Type: "AWS::S3::Bucket"
+    Description: "Creating Amazon S3 bucket from CloudFormation"
+    Properties: 
+      AccessControl: Private
+      BucketName: !Sub ${AWS::StackName}-${Client}-bucket-processados
+      PublicAccessBlockConfiguration: 
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+  BucketCliente: 
+    Type: "AWS::S3::Bucket"
+    Description: "Creating Amazon S3 bucket from CloudFormation"
+    Properties: 
+      AccessControl: Private
+      BucketName: !Sub ${AWS::StackName}-${Client}-bucket-cliente
+      PublicAccessBlockConfiguration: 
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
   Vpc:
     Type: AWS::EC2::VPC
     Properties:
@@ -183,14 +216,6 @@ Resources:
           systemctl enable jupyter
       SecurityGroupIds:
         - !Ref InstanceSecurityGroup
-      Tags:
-        - Key: Name
-          Value: !Sub ${AWS::StackName}-${Client}
-  Bucket:
-    Type: AWS::S3::Bucket
-    Properties:
-      BucketName: !Sub ${AWS::StackName}-${Client}
-      AccessControl: Private
       Tags:
         - Key: Name
           Value: !Sub ${AWS::StackName}-${Client}

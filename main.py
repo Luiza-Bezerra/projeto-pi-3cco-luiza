@@ -46,8 +46,8 @@ if __name__ == "__main__":
         from modules.sprint2 import execute
         execute(args['config'])
 
-    elif module == 'generate_csv':
-        from modules.sprint3.generate_csv import execute
+    elif module == 'generate_files':
+        from modules.sprint3.generate_files import execute
         execute(args["samples"])
 
     else:

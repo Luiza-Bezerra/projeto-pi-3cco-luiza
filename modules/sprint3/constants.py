@@ -66,7 +66,7 @@ REGIOES = [
             'populacao': 56_560_081,
             'densidade_demografica': 36.06,
             'area':  576_736_819,
-            'regiao_geoeconomica': ['Amazônia','Nordeste'],
+            'regiao_geoeconomica':['Amazônia','Nordeste'],
             'gentilico': 'nordestino',
             'raca_predominante': 'parda'
         }
@@ -87,22 +87,31 @@ REGIOES = [
     },
 ]
 
-GRAU = ['alto', 'medio', 'baixo']
+CLASSES = [
+    {'id':'F', 'description':'Vulnerável', 'minimo': 324, 'maximo': 1764},
+    {'id':'E', 'description':'Baixa classe media', 'minimo': 1764, 'maximo': 2564},
+    {'id':'D', 'description':'Media classe media', 'minimo': 2564, 'maximo': 4076},
+    {'id':'C', 'description':'Alta classe media','minimo': 4076, 'maximo':9920},
+    {'id':'B', 'description':'Baixa classe alta','minimo': 9920, 'maximo': 10_000},
+    {'id':'A', 'description':'Alta classe alta','minimo': 10_000, 'maximo':22_000},
+]
 
-GENERO = ['M'*4,'F']
+GRAU = ['leve', 'moderado', 'severo']
+
+GENERO = ['M','M','M','M','F']
 
 RACA = [
     {'id':1,'description':'Branca'},
     {'id':2,'description':'Preta'},
     {'id':3,'description':'Parda'},
-    {'id':4,'description':'Indígena'},
+    {'id':4,'description':'Indigena'},
     {'id':5,'description':'Amarela'}
 ]
 
 TIPOS_AUTISMO = [
     {
         'id':1, 
-        'title': 'Síndrome de Asperger', 
+        'title': 'Sindrome de Asperger', 
         'description':'Está extremidade mais branda do espectro autista, pois a inteligência pode ser alta e a capacidade de realizar as atividades diárias é preservada. No entanto, a dificuldade na interação social é muito comum.'
     },
     {
