@@ -28,20 +28,22 @@ def generate_data_to_csv(identificador):
     }
     
 def generate_data_to_xml(identificador):
+    nation =  random.choice(CONST.PAISES)
     region = random.choice(CONST.REGIOES)
     economia = region.get('economics')
     return {
         'identificador': identificador,
-        'pais': random.choice(CONST.PAISES).get('description'),
+        'pais': nation.get('description'),
+        'PIB_nacional': nation.get('economics').get('PIB'),
         'regiao': region.get('description'),
         'PIB_percent_BR': economia.get('PIB_percent_BR'),
-        'PIB': economia.get('PIB'),
-        'populacao': economia.get('populacao'),
-        'densidade_demografica':economia.get('densidade_demografica'),
-        'area': economia.get('area'),
+        'PIB_regional': economia.get('PIB'),
+        'populacao_regiao': economia.get('populacao'),
+        'densidade_demografica_regiao':economia.get('densidade_demografica'),
+        'area_regiao': economia.get('area'),
         # 'regiao_geoeconomica': economia.get('regiao_geoeconomica'), #apresenta um erro
-        'gentilico': economia.get('gentilico'),
-        'raca_predominante': economia.get('raca_predominante')
+        'gentilico_regiao': economia.get('gentilico'),
+        'raca_predominante_regiao': economia.get('raca_predominante')
     }
 
 def generate_data_to_json(identificador):
