@@ -1,5 +1,3 @@
-
-from ast import Return
 import mysql.connector
 
 COLUNAS = [
