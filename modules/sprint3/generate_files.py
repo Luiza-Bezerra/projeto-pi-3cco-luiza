@@ -49,7 +49,7 @@ def generate_data_to_xml(identificador):
 def generate_data_to_json(identificador):
     classe = random.choice(CONST.CLASSES)
     total_salario = random.randrange(classe.get('minimo'), classe.get('maximo'))
-    quantidade_familia = random.choice([1, 6])
+    quantidade_familia = random.choice([1,2,3,4,5,6])
 
     return {
         'id_paciente': identificador,
@@ -62,17 +62,17 @@ def generate_data_to_json(identificador):
     }
 
 def generate_file_csv(data_list, file_date):
-    path = f'data\\{file_date}-autismo_csv.csv'
+    path = f'data\\{file_date}-autismo-csv.csv'
     df = pd.DataFrame(data_list)
     df.to_csv(path, index=False)
 
 def generate_file_xml(data_list, file_date):
-    path = f'data\\{file_date}-autismo_xml.xml'
+    path = f'data\\{file_date}-autismo-xml.xml'
     df = pd.DataFrame(data_list)
     df.to_xml(path, index=False)
 
 def generate_file_json(data_list, file_date):
-    path = f'data\\{file_date}-autismo_json.json'
+    path = f'data\\{file_date}-autismo-json.json'
     df = pd.DataFrame(data_list)
     df.to_json(path, orient="records")
 

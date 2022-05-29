@@ -37,6 +37,12 @@
 
     python generate_sprint_2.py
 
+# ___ Rodar a sprint 3______
+    Verificar se o terminal está na raiz do projeto : /projeto-pi-3cco-luiza
+    utilizar ocomando : python main.py -m 'generate_files' -s 100_000 
+    parametro -m é o modeulo a ser executado
+    parametro -s é a quantidade de dados a ser gerado
+
 # ___ Validar o banco ______
 
     docker exec -it banco_sprint_2 bash
