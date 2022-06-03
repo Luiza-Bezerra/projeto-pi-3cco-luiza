@@ -32,7 +32,7 @@ def generate_data_to_xml(identificador):
     region = random.choice(CONST.REGIOES)
     economia = region.get('economics')
     return {
-        'identificador': identificador,
+        'id_regiao_paciente': identificador,
         'pais': nation.get('description'),
         'PIB_nacional': nation.get('economics').get('PIB'),
         'regiao': region.get('description'),
@@ -52,9 +52,9 @@ def generate_data_to_json(identificador):
     quantidade_familia = random.choice([1,2,3,4,5,6])
 
     return {
-        'id_paciente': identificador,
+        'id_renda_paciente': identificador,
         'classe':classe.get('id'),
-        'classe-descricao': classe.get('description'),
+        'classe_descricao': classe.get('description'),
         'quantidade_familia':quantidade_familia,
         'total_salario': total_salario,
         'empregado': random.choice([True, False]),
